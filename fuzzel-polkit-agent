@@ -18,7 +18,6 @@ if test "$1" != '_CALLED_INTERNALLY'; then
     parameters="$(prepParams "$@")"
 
     exec cmd-polkit-agent -s -c "$0 _CALLED_INTERNALLY $parameters*"
-    # exec cmd-polkit-agent -s -c 'rofi-polkit-agent _CALLED_INTERNALLY'
 else
     # Remove $1 (_CALLED_INTERNALLY) from parameter array
     shift 1
@@ -31,23 +30,25 @@ else
         then
             # Parse msg fields
             prompt="$( printf '%s' "$msg" | jq -rc '.prompt // "Password:"')"
-            message="$(printf '%s' "$msg" | jq -rc '.message // "No message given!"')"
 
             # Request a password prompt from fuzzel
-            response="$(printf '' | fuzzel 
-                -f JetBrainsMono 
-                -C ebcb8bff 
-                -b 1d1f21ff 
-                -T footclient 
-                -B 3 
-                -t 88c0d0ff 
-                -m a3be8cff 
-                -S d8dee9ff 
-                -s bf616aff 
-                -d -w 10 
-                -l 6 
-                -d -p "$prompt" \
-                -mesg "$message" -password -no-fixed-num-lines "$@")"
+            response="$(printf '' | fuzzel \
+                -f JetBrainsMono \
+                -C ebcb8bff \
+                -b 1d1f21ff \
+                -T footclient \ 
+                -B 3 \
+                -t 88c0d0ff \
+                -m a3be8cff \
+                -S d8dee9ff \
+                -s bf616aff \
+                -w 10 \
+                -l 6 \
+                -d \
+                -p "$prompt" \ 
+                --password \
+                --no-fuzzy \
+                -R )"
 
             # Cancel authentication if no password was given,
             # otherwise respond with given password
@@ -58,4 +59,3 @@ else
         fi
     done
 fi
-
