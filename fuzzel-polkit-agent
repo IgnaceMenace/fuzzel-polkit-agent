@@ -47,8 +47,7 @@ else
                 -d \
                 -p "$prompt" \ 
                 --password \
-                --no-fuzzy \
-                -R )"
+                --no-fuzzy )"
 
             # Cancel authentication if no password was given,
             # otherwise respond with given password
