@@ -29,7 +29,7 @@ else
         if echo "$msg" | jq -e '.action == "request password"' 1>/dev/null 2>/dev/null
         then
             # Parse msg fields
-            prompt="$( printf '%s' "$msg" | jq -rc '.prompt // "Password:"')"
+            prompt="$( printf '%s' "$msg" | jq -rc '.prompt // "Password: "')"
 
             # Request a password prompt from fuzzel
             response="$(printf '' | fuzzel \
