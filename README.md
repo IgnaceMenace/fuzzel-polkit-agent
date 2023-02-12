@@ -11,7 +11,7 @@ Start the polkit agent with default options :
 fuzzel-polkit-agent
 ```
 
-Start the polkit agent with any additional argument passed directly to rofi :
+Start the polkit agent with any additional argument passed directly to fuzzel :
 ```sh
 fuzzel-polkit-agent -theme PATH -monitor NUM
 ```
@@ -40,11 +40,7 @@ please leave a issue and/or make a pull request.
 All help is appreciated!
 
 ## WARNING/DISCLAMIER
-This script does not take any real measures to 'securely' take in the password.
-As stated in the rofi man pages about the -password flag
-   "Hide the input text. This should not be considered secure!".
-All the script does is enabling that flag and the disable history flag.
-No other measures are taken so use at your own discretion.
+This script does not take any real measures to 'securely' take in the password but the use of --password flag.
 
 ## Credits
 Without these programmers, this one would never had been made.
