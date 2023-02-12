@@ -1,14 +1,14 @@
 #! /bin/sh
 
 case "$*" in 'h'|'help'|'-h'|'-help'|'--help')
-    echo 'Usage: rofi-polkit-agent [ROFI_OPTIONS]...
-Polkit agent using rofi for GUI.
+    echo 'Usage: fuzzel-polkit-agent [FUZZEL_OPTIONS]...
+Polkit agent using fuzzel for GUI.
 
 Start the polkit agent, with default options :
-  rofi-polkit-agent
+  fuzzel-polkit-agent
 
-Start the polkit agent, with any additional argument passed directly to rofi :
-  rofi-polkit-agent -theme PATH -monitor NUM
+Start the polkit agent, with any additional argument passed directly to fuzzel :
+  fuzzel-polkit-agent -theme PATH -monitor NUM
 '
 esac
 
@@ -33,8 +33,20 @@ else
             prompt="$( printf '%s' "$msg" | jq -rc '.prompt // "Password:"')"
             message="$(printf '%s' "$msg" | jq -rc '.message // "No message given!"')"
 
-            # Request a password prompt from rofi
-            response="$(printf '' | rofi  -dmenu -p "$prompt" \
+            # Request a password prompt from fuzzel
+            response="$(printf '' | fuzzel 
+                -f JetBrainsMono 
+                -C ebcb8bff 
+                -b 1d1f21ff 
+                -T footclient 
+                -B 3 
+                -t 88c0d0ff 
+                -m a3be8cff 
+                -S d8dee9ff 
+                -s bf616aff 
+                -d -w 10 
+                -l 6 
+                -dmenu -p "$prompt" \
                 -mesg "$message" -password -no-fixed-num-lines "$@")"
 
             # Cancel authentication if no password was given,
