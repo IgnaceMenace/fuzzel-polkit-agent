@@ -1,25 +1,22 @@
-# rofi-polkit-agent
-Simple polkit agent for window managers, using rofi as prompt.
+# fuzzel-polkit-agent
+Simple polkit agent for window managers, using fuzzel as prompt.
 
 ## Usage
 ```
-Usage : rofi-polkit-agent [-h|--help] [ROFI_OPTIONS]...
+Usage : fuzzel-polkit-agent [-h|--help] [FUZZEL_OPTIONS]...
 ```
 
 Start the polkit agent with default options :
 ```sh
-rofi-polkit-agent
+fuzzel-polkit-agent
 ```
 
 Start the polkit agent with any additional argument passed directly to rofi :
 ```sh
-rofi-polkit-agent -theme PATH -monitor NUM
+fuzzel-polkit-agent -theme PATH -monitor NUM
 ```
 
 ## Installation
-### Arch AUR
-This script is available on the AUR as `rofi-polkit-agent`
-
 
 ### Manual Installation
 - Install dependencies
