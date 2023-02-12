@@ -30,7 +30,7 @@ fuzzel-polkit-agent -theme PATH -monitor NUM
 | sh               | a posix complient shell, preinstalled on most systems |
 | coreutils        | a coreutils suit, preinstalled on most systems        |
 | jq               | https://stedolan.github.io/jq/                        |
-| rofi             | https://github.com/davatorium/rofi                    |
+| fuzzel           | https://codeberg.org/dnkl/fuzzel                      |
 | cmd-polkit-agent | https://github.com/OmarCastro/cmd-polkit              |
 
 
@@ -51,5 +51,6 @@ Without these programmers, this one would never had been made.
 - https://github.com/OmarCastro the creator of cmd-polkit
 - https://github.com/davatorium the creator of rofi
 - https://github.com/stedolan   the creator of jq
+- https://github.com/czaplicki  the creator of this script for rofi
 
 
