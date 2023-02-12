@@ -46,7 +46,7 @@ else
                 -s bf616aff 
                 -d -w 10 
                 -l 6 
-                -dmenu -p "$prompt" \
+                -d -p "$prompt" \
                 -mesg "$message" -password -no-fixed-num-lines "$@")"
 
             # Cancel authentication if no password was given,
