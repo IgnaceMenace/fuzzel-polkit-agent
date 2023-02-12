@@ -49,8 +49,6 @@ No other measures are taken so use at your own discretion.
 ## Credits
 Without these programmers, this one would never had been made.
 - https://github.com/OmarCastro the creator of cmd-polkit
-- https://github.com/davatorium the creator of rofi
+- https://codeberg.org/dnkl     the creator of fuzzel
 - https://github.com/stedolan   the creator of jq
 - https://github.com/czaplicki  the creator of this script for rofi
-
-
